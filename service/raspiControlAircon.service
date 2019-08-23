@@ -1,0 +1,11 @@
+[Unit]
+Description=Raspi Control Aircon Daemon
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/work/RaspiControl/aircon.py
+User=root
+Restart=always
+RestartSec=5s
+Type=simple
+PIDFile=/var/run/raspicontrol.pid
+[Install]
+WantedBy=multi-user.target
